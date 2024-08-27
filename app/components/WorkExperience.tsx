@@ -55,30 +55,30 @@ export default function WorkExperience() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-accent">Work Experience</h2>
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 h-full w-0.5 bg-light opacity-50 transform -translate-x-1/2"></div>
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-light opacity-50 transform md:-translate-x-1/2"></div>
           
           {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              className={`mb-8 flex justify-between items-center w-full ${
-                index % 2 === 0 ? 'flex-row-reverse' : ''
-              }`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="order-1 w-5/12"></div>
-              <div className="z-20 flex items-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full">
-                <h1 className="mx-auto font-semibold text-lg text-dark">{index + 1}</h1>
+            <div key={index} className={`mb-8 flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} justify-between items-start md:items-center`}>
+              <div className={`flex items-center mb-4 md:mb-0 md:w-5/12 ${index % 2 === 0 ? 'md:justify-start' : 'md:justify-end'}`}>
+                <div className={`w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-4 ${index % 2 === 0 ? 'md:order-last md:ml-4 md:mr-0' : 'md:order-first md:mr-4 md:ml-0'}`}>
+                  <span className="text-dark font-bold">{index + 1}</span>
+                </div>
+                <div className="md:hidden">
+                  <h3 className="font-bold text-xl text-accent">{exp.title}</h3>
+                  <p className="text-sm font-medium">{exp.company}</p>
+                  <p className="text-xs opacity-75">{exp.period}</p>
+                </div>
               </div>
               <motion.div
-                className="order-1 bg-light rounded-lg shadow-md w-5/12 px-6 py-4"
+                className="bg-light text-dark rounded-lg shadow-md p-6 md:w-5/12"
                 layoutId={`card-${index}`}
               >
-                <h3 className="font-bold text-dark text-xl mb-2">{exp.title}</h3>
-                <p className="text-sm text-primary font-medium mb-1">{exp.company}</p>
-                <p className="text-gray-600 text-xs mb-2">{exp.period}</p>
-                <p className="text-gray-600 mb-4">{exp.description}</p>
+                <div className="hidden md:block">
+                  <h3 className="font-bold text-xl text-primary mb-2">{exp.title}</h3>
+                  <p className="text-sm font-medium text-secondary mb-1">{exp.company}</p>
+                  <p className="text-xs text-gray-600 mb-2">{exp.period}</p>
+                </div>
+                <p className="text-gray-700 mb-4">{exp.description}</p>
                 <button
                   onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
                   className="text-primary hover:text-primary-dark transition-colors duration-300 text-sm font-medium"
@@ -103,7 +103,7 @@ export default function WorkExperience() {
                   )}
                 </AnimatePresence>
               </motion.div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
