@@ -2,8 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 const projects = [
-  { id: 1, title: "Digital Marketing Campaign", description: "Boosted brand awareness for a pizza restaurant chain" },
-  { id: 2, title: "Social Media Strategy", description: "Increased engagement across multiple platforms" },
+  { id: 1, title: "Sbarro", description: "Digital marketing campaign to boost brand awareness" },
+  { id: 2, title: "Laxmii", description: "Inclusive marketing campaign for Bollywood movie promoting transgender rights" },
+  { id: 3, title: "H&R Johnson", description: "Comprehensive digital marketing campaign for 'Live Free Germ Free'" },
   // Add more projects as needed
 ];
 
