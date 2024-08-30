@@ -5,6 +5,15 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaCheckCircle, FaLightbulb, FaCog, FaTrophy, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaHashtag, FaThumbsUp, FaComment, FaShare } from 'react-icons/fa';
 
+interface Project {
+  title: string;
+  client?: string;
+  year?: string;
+  description: string;
+  objectives?: string[];
+  // Add other properties as needed
+}
+
 function ProjectSection({ title, children, icon }: { title: string; children: React.ReactNode; icon: React.ReactNode }) {
   return (
     <motion.div 
@@ -41,7 +50,7 @@ function FloatingSocialIcon({ icon: Icon, className }: { icon: React.ElementType
   );
 }
 
-export default function AnimatedProjectContent({ project }) {
+export default function AnimatedProjectContent({ project }: { project: Project }) {
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 to-purple-100">
       {/* Social media icons background */}
