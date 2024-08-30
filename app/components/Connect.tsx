@@ -41,7 +41,7 @@ export default function Connect() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-5xl font-bold mb-12 text-center text-primary">Let's Connect</h2>
+        <h2 className="text-5xl font-bold mb-12 text-center text-primary">Let&apos;s Connect</h2>
         <form className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label htmlFor="name" className="block mb-2 text-lg text-primary font-semibold">Name</label>

@@ -42,7 +42,7 @@ export default function Testimonials() {
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-full flex-shrink-0">
                   <div className="px-16"> {/* Added padding here */}
-                    <blockquote className="text-xl italic mb-4">"{testimonial.content}"</blockquote>
+                    <blockquote className="text-xl italic mb-4">&ldquo;{testimonial.content}&rdquo;</blockquote>
                     <p className="font-bold">{testimonial.name}</p>
                     <p className="text-sm">{testimonial.role}</p>
                   </div>

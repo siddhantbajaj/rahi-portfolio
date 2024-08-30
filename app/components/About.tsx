@@ -8,16 +8,18 @@ export default function About() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/3 mb-8 md:mb-0 relative">
             <div className="w-64 h-64 bg-accent rounded-full absolute -top-4 -left-4 animate-pulse"></div>
-            <img
+            <Image
               src="/profile-picture.jpg"
               alt="Rahi Shah"
-              className="rounded-full w-64 h-64 object-cover relative z-10 border-4 border-light"
+              width={256}
+              height={256}
+              className="rounded-full object-cover relative z-10 border-4 border-light"
             />
           </div>
           <div className="md:w-2/3 md:pl-12">
             <h2 className="text-4xl font-bold mb-6 text-accent">About Me</h2>
             <p className="mb-4 text-lg">
-              Hello! I'm Rahi Shah, a passionate digital marketer with a flair for creating impactful campaigns and driving engagement across various platforms. 🚀
+              Hello! I&apos;m Rahi Shah, a passionate digital marketer with a flair for creating impactful campaigns and driving engagement across various platforms. 🚀
             </p>
             <p className="text-lg">
               With a keen eye for trends and a data-driven approach, I specialize in developing strategies that resonate with target audiences and deliver measurable results. 📊💡
